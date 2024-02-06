@@ -1,7 +1,4 @@
-<!DOCTYPE html>
-<html>
-
-<head>
+<html><head>
 	<meta charset="utf-8">
 	<meta name="google" value="notranslate">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -21,15 +18,421 @@
 		}
 	</style>
 
-</head>
+<style type="text/css">.blocklySvg {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  overflow: hidden;
+}
+.blocklyWidgetDiv {
+  position: absolute;
+  display: none;
+  z-index: 999;
+}
+.blocklyDraggable {
+  cursor: url(../media/handopen.cur) 8 5, auto;
+}
+.blocklyResizeSE {
+  fill: #aaa;
+  cursor: se-resize;
+}
+.blocklyResizeSW {
+  fill: #aaa;
+  cursor: sw-resize;
+}
+.blocklyResizeLine {
+  stroke-width: 1;
+  stroke: #888;
+}
+.blocklyHighlightedConnectionPath {
+  stroke-width: 4px;
+  stroke: #fc3;
+  fill: none;
+}
+.blocklyPathLight {
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+}
+.blocklySelected>.blocklyPath {
+  stroke-width: 3px;
+  stroke: #fc3;
+}
+.blocklySelected>.blocklyPathLight {
+  display: none;
+}
+.blocklyDragging>.blocklyPath,
+.blocklyDragging>.blocklyPathLight {
+  fill-opacity: .8;
+  stroke-opacity: .8;
+}
+.blocklyDragging>.blocklyPathDark {
+  display: none;
+}
+.blocklyDisabled>.blocklyPath {
+  fill-opacity: .5;
+  stroke-opacity: .5;
+}
+.blocklyDisabled>.blocklyPathLight,
+.blocklyDisabled>.blocklyPathDark {
+  display: none;
+}
+.blocklyText {
+  cursor: default;
+  font-family: "Source Code Pro","Nanum Gothic Coding",Menlo,Monaco,Consolas,"Courier New",monospace;
+  font-size: 10pt;
+  fill: #fff;
+}
+.blocklyNonEditableText>text {
+  pointer-events: none;
+}
+.blocklyNonEditableText>rect,
+.blocklyEditableText>rect {
+  fill: #fff;
+  fill-opacity: .6;
+}
+.blocklyNonEditableText>text,
+.blocklyEditableText>text {
+  fill: #000;
+}
+.blocklyEditableText:hover>rect {
+  stroke-width: 2;
+  stroke: #fff;
+}
+.blocklyBubbleText {
+  fill: #000;
+}
+.blocklySvg text {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: inherit;
+}
+.blocklyHidden {
+  display: none;
+}
+.blocklyFieldDropdown:not(.blocklyHidden) {
+  display: block;
+}
+.blocklyTooltipBackground {
+  fill: #ffffc7;
+  stroke-width: 1px;
+  stroke: #d8d8d8;
+}
+.blocklyTooltipShadow,
+.blocklyDropdownMenuShadow {
+  fill: #bbb;
+  filter: url(#blocklyShadowFilter);
+}
+.blocklyTooltipText {
+  font-family: "Source Code Pro","Nanum Gothic Coding",Menlo,Monaco,Consolas,"Courier New",monospace;
+  font-size: 9pt;
+  fill: #000;
+}
+.blocklyIconShield {
+  cursor: default;
+  fill: #00c;
+  stroke-width: 1px;
+  stroke: #ccc;
+}
+.blocklyIconGroup:hover>.blocklyIconShield {
+  fill: #00f;
+  stroke: #fff;
+}
+.blocklyIconGroup:hover>.blocklyIconMark {
+  fill: #fff;
+}
+.blocklyIconMark {
+  cursor: default !important;
+  font-family: "Source Code Pro","Nanum Gothic Coding",Menlo,Monaco,Consolas,"Courier New",monospace;
+  font-size: 9pt;
+  font-weight: bold;
+  fill: #ccc;
+  text-anchor: middle;
+}
+.blocklyWarningBody {
+}
+.blocklyMinimalBody {
+  margin: 0;
+  padding: 0;
+}
+.blocklyCommentTextarea {
+  margin: 0;
+  padding: 2px;
+  border: 0;
+  resize: none;
+  background-color: #ffc;
+}
+.blocklyHtmlInput {
+  font-family: "Source Code Pro","Nanum Gothic Coding",Menlo,Monaco,Consolas,"Courier New",monospace;
+  font-size: 10pt;
+  border: none;
+  outline: none;
+  width: 100%
+}
+.blocklyMutatorBackground {
+  fill: #fff;
+  stroke-width: 1;
+  stroke: #ddd;
+}
+.blocklyFlyoutBackground {
+  fill: #ddd;
+  fill-opacity: .8;
+}
+.blocklyColourBackground {
+  fill: #666;
+}
+.blocklyScrollbarBackground {
+  fill: #fff;
+  stroke-width: 1;
+  stroke: #e4e4e4;
+}
+.blocklyScrollbarKnob {
+  fill: #ccc;
+}
+.blocklyScrollbarBackground:hover+.blocklyScrollbarKnob,
+.blocklyScrollbarKnob:hover {
+  fill: #bbb;
+}
+.blocklyInvalidInput {
+  background: #faa;
+}
+.blocklyAngleCircle {
+  stroke: #444;
+  stroke-width: 1;
+  fill: #ddd;
+  fill-opacity: .8;
+}
+.blocklyAngleMarks {
+  stroke: #444;
+  stroke-width: 1;
+}
+.blocklyAngleGauge {
+  fill: #f88;
+  fill-opacity: .8;  
+}
+.blocklyAngleLine {
+  stroke: #f00;
+  stroke-width: 2;
+  stroke-linecap: round;
+}
+.blocklyContextMenu {
+  border-radius: 4px;
+}
+.blocklyDropdownMenu {
+  padding: 0 !important;
+}
+.blocklyWidgetDiv .goog-option-selected .goog-menuitem-checkbox,
+.blocklyWidgetDiv .goog-option-selected .goog-menuitem-icon {
+  background: url(../media/sprites.png) no-repeat 0 0 !important;
+}
+.blocklyToolboxDiv {
+  background-color: #f5f5f5;
+  display: none;
+  overflow-x: visible;
+  overflow-y: auto;
+  position: absolute;
+}
+.blocklyTreeRoot {
+  padding: 4px 0;
+}
+.blocklyTreeRoot:focus {
+  outline: none;
+}
+.blocklyTreeRow {
+  line-height: 22px;
+  height: 22px;
+  padding-right: 1em;
+  white-space: nowrap;
+}
+.blocklyToolboxDiv[dir="RTL"] .blocklyTreeRow {
+  padding-right: 0;
+  padding-left: 1em !important;
+}
+.blocklyTreeRow:hover {
+  background-color: #e4e4e4;
+}
+.blocklyTreeIcon {
+  height: 16px;
+  width: 16px;
+  vertical-align: middle;
+  background-image: url(../media/tree.png);
+}
+.blocklyTreeIconClosedLtr {
+  background-position: -32px -1px;
+}
+.blocklyTreeIconClosedRtl {
+  background-position: 0px -1px;
+}
+.blocklyTreeIconOpen {
+  background-position: -16px -1px;
+}
+.blocklyTreeIconNone {
+  background-position: -48px -1px;
+}
+.blocklyTreeSelected>.blocklyTreeIconClosedLtr {
+  background-position: -32px -17px;
+}
+.blocklyTreeSelected>.blocklyTreeIconClosedRtl {
+  background-position: 0px -17px;
+}
+.blocklyTreeSelected>.blocklyTreeIconOpen {
+  background-position: -16px -17px;
+}
+.blocklyTreeSelected>.blocklyTreeIconNone {
+  background-position: -48px -17px;
+}
+.blocklyTreeLabel {
+  cursor: default;
+  font-family: "Source Code Pro","Nanum Gothic Coding",Menlo,Monaco,Consolas,"Courier New",monospace;
+  font-size: 14px;
+  padding: 0 3px;
+  vertical-align: middle;
+}
+.blocklyTreeSelected  {
+  background-color: #57e !important;
+}
+.blocklyTreeSelected .blocklyTreeLabel {
+  color: #fff;
+}
+.blocklyWidgetDiv .goog-palette {
+  outline: none;
+  cursor: default;
+}
+.blocklyWidgetDiv .goog-palette-table {
+  border: 1px solid #666;
+  border-collapse: collapse;
+}
+.blocklyWidgetDiv .goog-palette-cell {
+  height: 13px;
+  width: 15px;
+  margin: 0;
+  border: 0;
+  text-align: center;
+  vertical-align: middle;
+  border-right: 1px solid #666;
+  font-size: 1px;
+}
+.blocklyWidgetDiv .goog-palette-colorswatch {
+  position: relative;
+  height: 13px;
+  width: 15px;
+  border: 1px solid #666;
+}
+.blocklyWidgetDiv .goog-palette-cell-hover .goog-palette-colorswatch {
+  border: 1px solid #FFF;
+}
+.blocklyWidgetDiv .goog-palette-cell-selected .goog-palette-colorswatch {
+  border: 1px solid #000;
+  color: #fff;
+}
+.blocklyWidgetDiv .goog-menu {
+  background: #fff;
+  border-color: #ccc #666 #666 #ccc;
+  border-style: solid;
+  border-width: 1px;
+  cursor: default;
+  font: normal 13px Arial, sans-serif;
+  margin: 0;
+  outline: none;
+  padding: 4px 0;
+  position: absolute;
+  z-index: 20000;
+}
+.blocklyWidgetDiv .goog-menuitem {
+  color: #000;
+  font: normal 13px Arial, sans-serif;
+  list-style: none;
+  margin: 0;
+  padding: 4px 7em 4px 28px;
+  white-space: nowrap;
+}
+.blocklyWidgetDiv .goog-menuitem.goog-menuitem-rtl {
+  padding-left: 7em;
+  padding-right: 28px;
+}
+.blocklyWidgetDiv .goog-menu-nocheckbox .goog-menuitem,
+.blocklyWidgetDiv .goog-menu-noicon .goog-menuitem {
+  padding-left: 12px;
+}
+.blocklyWidgetDiv .goog-menu-noaccel .goog-menuitem {
+  padding-right: 20px;
+}
+.blocklyWidgetDiv .goog-menuitem-content {
+  color: #000;
+  font: normal 13px Arial, sans-serif;
+}
+.blocklyWidgetDiv .goog-menuitem-disabled .goog-menuitem-accel,
+.blocklyWidgetDiv .goog-menuitem-disabled .goog-menuitem-content {
+  color: #ccc !important;
+}
+.blocklyWidgetDiv .goog-menuitem-disabled .goog-menuitem-icon {
+  opacity: 0.3;
+  -moz-opacity: 0.3;
+  filter: alpha(opacity=30);
+}
+.blocklyWidgetDiv .goog-menuitem-highlight,
+.blocklyWidgetDiv .goog-menuitem-hover {
+  background-color: #d6e9f8;
+  border-color: #d6e9f8;
+  border-style: dotted;
+  border-width: 1px 0;
+  padding-bottom: 3px;
+  padding-top: 3px;
+}
+.blocklyWidgetDiv .goog-menuitem-checkbox,
+.blocklyWidgetDiv .goog-menuitem-icon {
+  background-repeat: no-repeat;
+  height: 16px;
+  left: 6px;
+  position: absolute;
+  right: auto;
+  vertical-align: middle;
+  width: 16px;
+}
+.blocklyWidgetDiv .goog-menuitem-rtl .goog-menuitem-checkbox,
+.blocklyWidgetDiv .goog-menuitem-rtl .goog-menuitem-icon {
+  left: auto;
+  right: 6px;
+}
+.blocklyWidgetDiv .goog-option-selected .goog-menuitem-checkbox,
+.blocklyWidgetDiv .goog-option-selected .goog-menuitem-icon {
+  background: url(//ssl.gstatic.com/editor/editortoolbar.png) no-repeat -512px 0;
+}
+.blocklyWidgetDiv .goog-menuitem-accel {
+  color: #999;
+  direction: ltr;
+  left: auto;
+  padding: 0 6px;
+  position: absolute;
+  right: 0;
+  text-align: right;
+}
+.blocklyWidgetDiv .goog-menuitem-rtl .goog-menuitem-accel {
+  left: 0;
+  right: auto;
+  text-align: left;
+}
+.blocklyWidgetDiv .goog-menuitem-mnemonic-hint {
+  text-decoration: underline;
+}
+.blocklyWidgetDiv .goog-menuitem-mnemonic-separator {
+  color: #999;
+  font-size: 12px;
+  padding-left: 4px;
+}
+.blocklyWidgetDiv .goog-menuseparator {
+  border-top: 1px solid #ccc;
+  margin: 4px 0;
+  padding: 0;
+}
+</style></head>
 
 <body onload="start()">
 	<div class="header">
 		<nav class="navbar navbar-default" role="navigation">
 			<div class="container">
 				<div class="navbar-header">
-					<button type="button" class="navbar-toggle" data-toggle="collapse"
-						data-target=".navbar-ex1-collapse">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
 						<span class="sr-only">Toggle navigation</span>
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
@@ -58,8 +461,7 @@
 						<button type="button" class="btn btn-default navbar-btn" onclick="downloadCode()">
 							<span class="glyphicon glyphicon-download-alt"></span> Download C++ Code
 						</button>
-						<button type="button" class="btn btn-default navbar-btn" onclick="discard()"
-							data-toggle="button">
+						<button type="button" class="btn btn-default navbar-btn" onclick="discard()" data-toggle="button">
 							<span class="glyphicon glyphicon-trash"></span> Remove all blocks
 						</button>
 					</div>
@@ -73,9 +475,18 @@
 					<div class="panel-heading">
 						<h3 class="panel-title"><b>Workspace</b></h3>
 					</div>
-					<div id="blocklyDiv" class="panel-body">
+					<div id="blocklyDiv" class="panel-body" dir="LTR">
 
-					</div>
+					<div class="blocklyToolboxDiv" dir="LTR" style="display: block; height: 701px;"><div class="blocklyTreeRoot" id=":0" role="tree" aria-selected="false" aria-level="0" aria-labelledby=":0.label" aria-expanded="false" hidefocus="true" tabindex="0" aria-activedescendant=":a"><div class="blocklyTreeRow blocklyHidden" style="padding-left:0px;"><span style="display:inline-block;" class="" role="presentation"></span><span class="blocklyTreeLabel" id=":0.label"></span><span></span></div><div style="background-position:-100px 0;" role="group"><div class="" id=":1" role="treeitem" aria-selected="false" aria-level="1" aria-labelledby=":1.label" aria-setsize="9" aria-posinset="1" aria-expanded="true"><div class="blocklyTreeRow" style="padding-left:0px;"><span role="presentation" class="blocklyTreeIcon undefined undefined"></span><span style="display:inline-block;" class="blocklyTreeIcon blocklyTreeIconOpen" role="presentation"></span><span class="blocklyTreeLabel" id=":1.label">Variables</span><span></span></div><div style="background-position: 0px 0px;" role="group"><div class="" id=":2" role="treeitem" aria-selected="false" aria-level="2" aria-labelledby=":2.label"><div class="blocklyTreeRow" style="padding-left:19px;"><span role="presentation"></span><span style="display:inline-block;" class="blocklyTreeIcon blocklyTreeIconNone" role="presentation"></span><span class="blocklyTreeLabel" id=":2.label">Variable</span><span></span></div><div style="background-position:19px 0;display:none;" role="group"></div></div><div class="" id=":3" role="treeitem" aria-selected="false" aria-level="2" aria-labelledby=":3.label"><div class="blocklyTreeRow" style="padding-left:19px;"><span role="presentation"></span><span style="display:inline-block;" class="blocklyTreeIcon blocklyTreeIconNone" role="presentation"></span><span class="blocklyTreeLabel" id=":3.label">Pointer</span><span></span></div><div style="background-position:19px 0;display:none;" role="group"></div></div><div class="" id=":4" role="treeitem" aria-selected="false" aria-level="2" aria-labelledby=":4.label"><div class="blocklyTreeRow" style="padding-left:19px;"><span role="presentation"></span><span style="display:inline-block;" class="blocklyTreeIcon blocklyTreeIconNone" role="presentation"></span><span class="blocklyTreeLabel" id=":4.label">Array</span><span></span></div><div style="background-position:-100px 0;display:none;" role="group"></div></div></div></div><div class="" id=":5" role="treeitem" aria-selected="false" aria-level="1" aria-labelledby=":5.label" aria-setsize="9" aria-posinset="2"><div class="blocklyTreeRow" style="padding-left:0px;"><span role="presentation"></span><span style="display:inline-block;" class="blocklyTreeIcon blocklyTreeIconNone" role="presentation"></span><span class="blocklyTreeLabel" id=":5.label">Arithmetics</span><span></span></div><div style="background-position:0px 0;display:none;" role="group"></div></div><div class="" id=":6" role="treeitem" aria-selected="false" aria-level="1" aria-labelledby=":6.label" aria-setsize="9" aria-posinset="3"><div class="blocklyTreeRow" style="padding-left:0px;"><span role="presentation"></span><span style="display:inline-block;" class="blocklyTreeIcon blocklyTreeIconNone" role="presentation"></span><span class="blocklyTreeLabel" id=":6.label">Loops</span><span></span></div><div style="background-position:0px 0;display:none;" role="group"></div></div><div class="" id=":7" role="treeitem" aria-selected="false" aria-level="1" aria-labelledby=":7.label" aria-setsize="9" aria-posinset="4"><div class="blocklyTreeRow" style="padding-left:0px;"><span role="presentation"></span><span style="display:inline-block;" class="blocklyTreeIcon blocklyTreeIconNone" role="presentation"></span><span class="blocklyTreeLabel" id=":7.label">Logic</span><span></span></div><div style="background-position:0px 0;display:none;" role="group"></div></div><div class="" id=":8" role="treeitem" aria-selected="false" aria-level="1" aria-labelledby=":8.label" aria-setsize="9" aria-posinset="5"><div class="blocklyTreeRow" style="padding-left:0px;"><span role="presentation"></span><span style="display:inline-block;" class="blocklyTreeIcon blocklyTreeIconNone" role="presentation"></span><span class="blocklyTreeLabel" id=":8.label">Functions</span><span></span></div><div style="background-position:0px 0;display:none;" role="group"></div></div><div class="" id=":9" role="treeitem" aria-selected="false" aria-level="1" aria-labelledby=":9.label" aria-setsize="9" aria-posinset="6"><div class="blocklyTreeRow" style="padding-left:0px;"><span role="presentation"></span><span style="display:inline-block;" class="blocklyTreeIcon blocklyTreeIconNone" role="presentation"></span><span class="blocklyTreeLabel" id=":9.label">Structure</span><span></span></div><div style="background-position:0px 0;display:none;" role="group"></div></div><div class="" id=":a" role="treeitem" aria-selected="false" aria-level="1" aria-labelledby=":a.label" aria-setsize="9" aria-posinset="7"><div class="blocklyTreeRow" style="padding-left:0px;"><span role="presentation"></span><span style="display:inline-block;" class="blocklyTreeIcon blocklyTreeIconNone" role="presentation"></span><span class="blocklyTreeLabel" id=":a.label">Print</span><span></span></div><div style="background-position:0px 0;display:none;" role="group"></div></div><div class="" id=":b" role="treeitem" aria-selected="false" aria-level="1" aria-labelledby=":b.label" aria-setsize="9" aria-posinset="8"><div class="blocklyTreeRow" style="padding-left:0px;"><span role="presentation"></span><span style="display:inline-block;" class="blocklyTreeIcon blocklyTreeIconNone" role="presentation"></span><span class="blocklyTreeLabel" id=":b.label">Math</span><span></span></div><div style="background-position:0px 0;display:none;" role="group"></div></div><div class="" id=":c" role="treeitem" aria-selected="false" aria-level="1" aria-labelledby=":c.label" aria-setsize="9" aria-posinset="9"><div class="blocklyTreeRow" style="padding-left:0px;"><span role="presentation"></span><span style="display:inline-block;" class="blocklyTreeIcon blocklyTreeIconNone" role="presentation"></span><span class="blocklyTreeLabel" id=":c.label">Others</span><span></span></div><div style="background-position:-100px 0;display:none;" role="group"></div></div></div></div></div><svg xmlns="http://www.w3.org/2000/svg" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="blocklySvg" width="1218px" height="700px" style=""><defs><filter id="blocklyEmboss"><feGaussianBlur in="SourceAlpha" stdDeviation="1" result="blur"></feGaussianBlur><feSpecularLighting in="blur" surfaceScale="1" specularConstant="0.5" specularExponent="10" lighting-color="white" result="specOut"><fePointLight x="-5000" y="-10000" z="20000"></fePointLight></feSpecularLighting><feComposite in="specOut" in2="SourceAlpha" operator="in" result="specOut"></feComposite><feComposite in="SourceGraphic" in2="specOut" operator="arithmetic" k1="0" k2="1" k3="1" k4="0"></feComposite></filter><filter id="blocklyTrashcanShadowFilter"><feGaussianBlur in="SourceAlpha" stdDeviation="2" result="blur"></feGaussianBlur><feOffset in="blur" dx="1" dy="1" result="offsetBlur"></feOffset><feMerge><feMergeNode in="offsetBlur"></feMergeNode><feMergeNode in="SourceGraphic"></feMergeNode></feMerge></filter><filter id="blocklyShadowFilter"><feGaussianBlur stdDeviation="2"></feGaussianBlur></filter><pattern id="blocklyDisabledPattern" patternUnits="userSpaceOnUse" width="10" height="10"><rect width="10" height="10" fill="#aaa"></rect><path d="M 0 0 L 10 10 M 10 0 L 0 10" stroke="#cc0"></path></pattern></defs><g><g filter="url(#blocklyTrashcanShadowFilter)" transform="translate(1136,605)"><image width="47" height="45" xlink:href="media/trashbody.png" y="15"></image><image width="47" height="15" xlink:href="media/trashlid.png"></image></g><g transform="translate(290.99999999999955,115.00000000000017)"><g class="blocklyDraggable" transform="translate(20, 100)"><path class="blocklyPathDark" transform="translate(1, 1)" fill="#7d327d" d="m 0,8 A 8,8 0 0,1 8,0 H 15 l 6,4 3,0 6,-4 H 283.8999938964844 v 25 H 50 l -6,4 -3,0 -6,-4 h -7 a 8,8 0 0,0 -8,8 v 14 a 8,8 0 0,0 8,8 H 283.8999938964844 v 5 c 0,10 -8,-8 -8,7.5 s 8,-2.5 8,7.5 v 5 H 30 l -6,4 -3,0 -6,-4 H 8 a 8,8 0 0,1 -8,-8 z
+"></path><path class="blocklyPath" fill="#d153d1" d="m 0,8 A 8,8 0 0,1 8,0 H 15 l 6,4 3,0 6,-4 H 283.8999938964844 v 25 H 50 l -6,4 -3,0 -6,-4 h -7 a 8,8 0 0,0 -8,8 v 14 a 8,8 0 0,0 8,8 H 283.8999938964844 v 5 c 0,10 -8,-8 -8,7.5 s 8,-2.5 8,7.5 v 5 H 30 l -6,4 -3,0 -6,-4 H 8 a 8,8 0 0,1 -8,-8 z
+"></path><path class="blocklyPathLight" stroke="#df87df" d="m 1,7 A 7,7 0 0,1 8,1 H 15 l 6.5,4 2,0 6.5,-4 H 283.8999938964844 M 282.8999938964844,1 M 282.8999938964844,26 M 21.63603896932107,53.36396103067893 a 9,9 0 0,0 6.363961030678928,2.636038969321072 H 283.8999938964844 M 282.8999938964844,56 M 279.6999938964844,74.6 l 3.36,-1.8 M 3.050252531694167,76.94974746830583 A 7,7 0 0,1 1,72 V 8
+"></path><text class="blocklyText" transform="translate(10, 18)">main&nbsp;with:&nbsp;int&nbsp;argc,&nbsp;char**&nbsp;argv</text><text class="blocklyText" transform="translate(89.96249389648438, 73)">int&nbsp;type&nbsp;return&nbsp;value:</text><g class="blocklyDraggable" transform="translate(20, 26)" style=""><path class="blocklyPathDark" transform="translate(1, 1)" fill="#64327d" d="m 0,8 A 8,8 0 0,1 8,0 H 15 l 6,4 3,0 6,-4 H 93.98749923706055 v 5 c 0,10 -8,-8 -8,7.5 s 8,-2.5 8,7.5 v 5 H 30 l -6,4 -3,0 -6,-4 H 8 a 8,8 0 0,1 -8,-8 z
+"></path><path class="blocklyPath" fill="#a753d1" d="m 0,8 A 8,8 0 0,1 8,0 H 15 l 6,4 3,0 6,-4 H 93.98749923706055 v 5 c 0,10 -8,-8 -8,7.5 s 8,-2.5 8,7.5 v 5 H 30 l -6,4 -3,0 -6,-4 H 8 a 8,8 0 0,1 -8,-8 z
+"></path><path class="blocklyPathLight" stroke="#c187df" d="m 1,7 A 7,7 0 0,1 8,1 H 15 l 6.5,4 2,0 6.5,-4 H 93.98749923706055 M 92.98749923706055,1 M 89.78749923706054,19.6 l 3.36,-1.8 M 3.050252531694167,21.949747468305834 A 7,7 0 0,1 1,17 V 8
+"></path><text class="blocklyText" transform="translate(36, 18)">print</text><g class="blocklyIconGroup" display="block" transform="translate(10, 5)"><rect class="blocklyIconShield" width="16" height="16" rx="4" ry="4"></rect><text class="blocklyIconMark" x="8" y="12">★</text></g><g class="blocklyDraggable" transform="translate(95, 0)"><path class="blocklyPathDark" transform="translate(1, 1)" fill="#587d32" d="m 0,0 H 72 v 25 H 0 V 20 c 0,-10 -8,8 -8,-7.5 s 8,2.5 8,-7.5 z
+"></path><path class="blocklyPath" fill="#92d153" d="m 0,0 H 72 v 25 H 0 V 20 c 0,-10 -8,8 -8,-7.5 s 8,2.5 8,-7.5 z
+"></path><path class="blocklyPathLight" stroke="#b3df87" d="m 1,1 H 72 M 71,1 M 1,25 V 19 m -7.36,-1 q -1.52,-5.5 0,-11 m 7.36,1 V 1 H 2
+"></path><g transform="translate(10, 18)"><image height="12px" width="12px" y="-12" xlink:href="media/quote0.png"></image></g><g class="blocklyEditableText" transform="translate(32, 18)" style="cursor: text;"><rect rx="4" ry="4" x="-5" y="-12" height="16" width="18"></rect><text class="blocklyText">&nbsp;</text></g><g transform="translate(50, 18)"><image height="12px" width="12px" y="-12" xlink:href="media/quote1.png"></image></g></g></g></g></g><g transform="translate(290.99999999999955,115.00000000000017)"></g><rect height="15" width="15" style="fill: #fff" x="1203" y="685"></rect><g transform="translate(1203, 0)"><rect class="blocklyScrollbarBackground" width="15" height="685"></rect><rect class="blocklyScrollbarKnob" rx="4" ry="4" width="9" x="3" height="373.1517509727626" y="205.23346303501935"></rect></g><g transform="translate(127, 685)"><rect class="blocklyScrollbarBackground" height="15" width="1076"></rect><rect class="blocklyScrollbarKnob" rx="4" ry="4" height="9" y="3" width="628.7376124270206" x="349.8685685994082"></rect></g></g><g transform="translate(127,0)" style="display: none;"><path class="blocklyFlyoutBackground" d="M 0,0 h 193.98749923706055 a 8 8 0 0 1 8 8 v 684 a 8 8 0 0 1 -8 8 h -193.98749923706055 z"></path><g><g transform="translate(0,8)"></g><g></g><g display="none" transform="translate(186.98749923706055, 8)"><rect class="blocklyScrollbarBackground" width="15" height="684"></rect><rect class="blocklyScrollbarKnob" rx="4" ry="4" width="9" x="3" height="2436.75" y="0"></rect></g></g></g><g class="blocklyHidden" transform="translate(332.3999938964844,166.1999969482422)" style="display: none;"><rect class="blocklyTooltipShadow" x="2" y="2" width="240.40000915527344" height="15.199999809265137"></rect><rect class="blocklyTooltipBackground" width="240.40000915527344" height="15.199999809265137"></rect><text class="blocklyTooltipText"><tspan dy="1em" x="5">A letter, word, or line of text.</tspan></text></g></svg></div>
 				</div>
 			</div>
 			<xml id="toolbox">
@@ -94,7 +505,7 @@
 								</block>
 							</value>
 						</block>
-						<block type="variables_pointer_&"></block>
+						<block type="variables_pointer_&amp;"></block>
 						<block type="variables_pointer_*"></block>
 					</category>
 					<category name="Array">
@@ -121,7 +532,7 @@
 						</block>
 					</category>
 				</category>
-				</category>
+				
 				<category name="Arithmetics">
 					<block type="math_number"></block>
 					<block type="math_arithmetic"></block>
@@ -149,7 +560,7 @@
 					<block type="procedures_defreturn"></block>
 					<block type="procedures_ifreturn"></block>
 				</category>
-				</category>
+				
 				<category name="Structure" custom="STRUCTURE">
 					<block type="structure_define"></block>
 					<block type="structure_declare"></block>
@@ -162,7 +573,7 @@
 					</block>
 					<block type="library_stdio_scanf"></block>
 					<block type="library_stdio_text"></block>
-					<block type='library_stdio_newLine'></block>
+					<block type="library_stdio_newLine"></block>
 				</category>
 				<category name="Math">
 					<block type="library_math_abs"></block>
@@ -176,7 +587,7 @@
 					<block type="library_math_numcompare"></block>
 				</category>
 				<category name="Others">
-					<block type='comment'>
+					<block type="comment">
 						<value name="VAR0">
 							<block type="library_stdio_text"></block>
 						</value>
@@ -190,19 +601,22 @@
 			<div class="col-xs-12">
 				<div id="code-wrapper" class="panel panel-default">
 					<div class="panel-heading">
-						<h3 class="panel-title"><b></b></h3> <button onclick="copyToClipboard()"
-							class="copy-button">📋<span class"copy-text">Copy The C++ Code</button> <br>
-						<a href="https://www.programiz.com/cpp-programming/online-compiler/" target="blank"><button
-								class="copy-button"> ▶️ <span class"copy-text">Online C++ Compiler</button></a>
+						<h3 class="panel-title"><b></b></h3> <button onclick="copyToClipboard()" class="copy-button">📋<span class"copy-text"="">Copy The C++ Code</span></button> <br>
+						<a href="https://www.programiz.com/cpp-programming/online-compiler/" target="blank"><button class="copy-button"> ▶️ <span class"copy-text"="">Online C++ Compiler</span></button></a>
 					</div>
-					<pre id="code" class="panel-body pre-scrollable"></pre>
+					<pre id="code" class="panel-body pre-scrollable"><span class="com">#include</span><span class="pln"> </span><span class="str">&lt;iostream&gt;</span><span class="pln">
+
+
+</span><span class="typ">int</span><span class="pln"> main</span><span class="pun">(</span><span class="typ">int</span><span class="pln"> argc</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">char</span><span class="pun">**</span><span class="pln"> argv</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+  std</span><span class="pun">::</span><span class="pln">cout </span><span class="pun">&lt;&lt;</span><span class="pln"> </span><span class="str">""</span><span class="pun">;</span><span class="pln">
+  </span><span class="kwd">return</span><span class="pln"> </span><span class="lit">0</span><span class="pun">;</span><span class="pln">
+</span><span class="pun">}</span></pre>
 				</div>
 			</div>
 		</div>
 	</div>
 	<footer id="footer" role="contentinfo">
-		<center><a href="https://programming24.school.blog/" target="blank"><button type="button"
-					btn-size="40px">Powered By <b>Programming24 School</b></button></a></center>
+		<center><a href="https://programming24.school.blog/" target="blank"><button type="button" btn-size="40px">Powered By <b>Programming24 School</b></button></a></center>
 	</footer><br>
 	<script type="text/javascript" src="blockly.js"></script>
 	<script type="text/javascript" src="blocks.js"></script>
@@ -266,6 +680,7 @@
 		/*Blockly.svgResize(workspace);*/
 
 	</script>
-</body>
 
-</html>
+
+
+<div class="blocklyWidgetDiv" style="direction: ltr;"></div></body></html>
